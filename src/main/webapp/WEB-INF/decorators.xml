@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+
+	<!-- apply web template -->
+	<decorator name="web" page="web.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	<!-- apply home template -->
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/quan-tri*</pattern>
+	</decorator>
+	<!-- Decorator for search.jsp without layout -->
+	<decorator name="searchRoom" page="nulllayout.jsp">
+		<pattern>/quan-tri/phong/tim-kiem*</pattern>
+	</decorator>
+	<decorator name="searchCustomer" page="nulllayout.jsp">
+		<pattern>/quan-tri/khach-hang/tim-kiem*</pattern>
+	</decorator>
+	<decorator name="searchCustomer" page="nulllayout.jsp">
+		<pattern>/quan-tri/nhan-vien/tim-kiem*</pattern>
+
+	</decorator>
+	
+	<!-- Order -->
+	<decorator name="searchRoomOfOrder" page="nulllayout.jsp">
+		<pattern>/quan-tri/dat-phong/danh-sach-phong*</pattern>
+	</decorator>
+	<decorator   name="changeRoomOfOrder" page="nulllayout.jsp">
+		<pattern>/quan-tri/phieu-dat/doi-phong*</pattern>
+	</decorator>
+	<decorator name="customerOfOrder"  page="nulllayout.jsp">
+		<pattern>/quan-tri/phieu-dat/khach-hang*</pattern>
+	</decorator>
+	<decorator name="searchOfOrder" page="nulllayout.jsp">
+		<pattern>/quan-tri/phieu-dat/tim-kiem*</pattern>
+	</decorator>
+	
+	<decorator name="changePass" page="nulllayout.jsp">
+		<pattern>/quan-tri/thong-tin/doi-mat-khau*</pattern>
+	</decorator>
+	
+	<decorator name="searchType" page="nulllayout.jsp">
+		<pattern>/quan-tri/loai-phong/tim-kiem*</pattern>
+	</decorator>
+	
+	<decorator name="searchType" page="nulllayout.jsp">
+		<pattern>/quan-tri/khuyen-mai/tim-kiem*</pattern>
+	</decorator>
+	
+	<!-- khuyen mai -->
+	<decorator name="searchType" page="nulllayout.jsp">
+		<pattern>/quan-tri/trang-chu/search*</pattern>
+	</decorator>
+	
+	
+	<decorator name="searchRoomOfOrder" page="nulllayout.jsp">
+		<pattern>/quan-tri/dat-phong/danh-sach-phong*</pattern>
+	</decorator>
+	<decorator name="feedBack" page="nulllayout.jsp">
+		<pattern>/quan-tri/phan-hoi/tim-kiem*</pattern>
+	</decorator>
+	<!--Vấn đề là với mỗi trang khác nhau thì cần phải có định nghĩa pattern 
+		của nó Nên sẽ sinh ra rất nhiều decorator trong này -> thêm dấu sao -->
+
+	<decorator name="pagingFeedback" page="nulllayout.jsp">
+		<pattern>/chi-tiet/phan-hoi*</pattern>
+	</decorator>
+
+	<decorator name="login" page="login.jsp">
+		<pattern>/dang-nhap</pattern>
+	</decorator>
+	<decorator name="register" page="register.jsp">
+		<pattern>/dang-ky</pattern>
+	</decorator>
+	
+	<decorator name="register" page="login.jsp">
+		<pattern>/doi-mat-khau</pattern>
+	</decorator>
+	
+	<decorator name="register1" page="register.jsp">
+		<pattern>/dang-ky/luu*</pattern>
+	</decorator>
+</decorators>
